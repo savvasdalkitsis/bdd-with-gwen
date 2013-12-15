@@ -16,6 +16,7 @@
 
     <modules>
         <module>bdd-gwen-filer</module>
+        <module>bdd-gwen-filer-instrument</module>
     </modules>
 
 </project>

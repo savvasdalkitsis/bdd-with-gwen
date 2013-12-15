@@ -4,8 +4,7 @@ import com.jayway.android.robotium.solo.Solo;
 
 import java.util.List;
 
-import static com.savvasdalkitsis.bdd.gwen.filer.instrument.module.model.assertions.AssertionsModule.isInFolderAssertion;
-import static com.savvasdalkitsis.bdd.gwen.filer.instrument.module.model.assertions.AssertionsModule.seesFilesAssertion;
+import static com.savvasdalkitsis.bdd.gwen.filer.instrument.module.model.assertions.AssertionsModule.*;
 
 public class UserAssertions {
     private Solo solo;
@@ -20,5 +19,9 @@ public class UserAssertions {
 
     public void isIn(String folder) {
         isInFolderAssertion(folder).assertWith(solo);
+    }
+
+    public void cannotSee(String fileName) {
+        cannotSeeFileAssertion(fileName).assertWith(solo);
     }
 }

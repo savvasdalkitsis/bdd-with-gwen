@@ -6,18 +6,18 @@ import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
-import com.google.common.collect.ImmutableMap;
 import com.savvasdalkitsis.bdd.gwen.filer.R;
 import com.savvasdalkitsis.bdd.gwen.filer.model.directory.DirectoryEntry;
 
+import java.util.HashMap;
 import java.util.Map;
 
 public class DirectoryListRowView extends FrameLayout {
 
-    private static final Map<DirectoryEntry.Type, Integer> ICONS = ImmutableMap.of(
-            DirectoryEntry.Type.FILE, R.drawable.file,
-            DirectoryEntry.Type.DIRECTORY, R.drawable.folder
-    );
+    private static final Map<DirectoryEntry.Type, Integer> ICONS = new HashMap<DirectoryEntry.Type, Integer>(){{
+        put(DirectoryEntry.Type.FILE, R.drawable.file);
+        put(DirectoryEntry.Type.DIRECTORY, R.drawable.folder);
+    }};
     private TextView name;
     private ImageView icon;
 

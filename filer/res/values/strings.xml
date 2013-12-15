@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Filer</string>
+    <string name="no_files_to_display">There are no files to display</string>
+    <string name="file_handling_not_supported">File handling not supported yet</string>
+    <string name="delete">Delete</string>
+    <string name="new_directory">New directory</string>
+</resources>

@@ -1,16 +1,16 @@
 package com.savvasdalkitsis.bdd.gwen.filer.instrument.model.agents;
 
-import android.content.Context;
+import com.savvasdalkitsis.bdd.gwen.filer.instrument.model.tasks.ArrangeWith;
 
 import static com.savvasdalkitsis.bdd.gwen.filer.instrument.module.model.arrangements.ArrangementsModule.viewFolderArrangement;
 
 public class UserArrangements {
-    private Context targetContext;
+    private final ArrangeWith arrangeWith;
 
-    public UserArrangements(Context targetContext) {
-        this.targetContext = targetContext;
+    public UserArrangements(ArrangeWith arrangeWith) {
+        this.arrangeWith = arrangeWith;
     }
     public void isViewing(Folder folder) {
-        viewFolderArrangement(folder).arrangeWith(targetContext);
+        arrangeWith.targetContext(viewFolderArrangement(folder));
     }
 }

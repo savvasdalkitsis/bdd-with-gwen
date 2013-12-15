@@ -1,27 +1,27 @@
 package com.savvasdalkitsis.bdd.gwen.filer.instrument.model.agents;
 
-import com.jayway.android.robotium.solo.Solo;
+import com.savvasdalkitsis.bdd.gwen.filer.instrument.model.tasks.AssertWith;
 
 import java.util.List;
 
 import static com.savvasdalkitsis.bdd.gwen.filer.instrument.module.model.assertions.AssertionsModule.*;
 
 public class UserAssertions {
-    private Solo solo;
+    private final AssertWith assertWith;
 
-    public UserAssertions(Solo solo) {
-        this.solo = solo;
+    public UserAssertions(AssertWith assertWith) {
+        this.assertWith = assertWith;
     }
 
     public void sees(List<String> fileNames) {
-        seesFilesAssertion(fileNames).assertWith(solo);
+        assertWith.solo(seesFilesAssertion(fileNames));
     }
 
     public void isIn(String folder) {
-        isInFolderAssertion(folder).assertWith(solo);
+        assertWith.solo(isInFolderAssertion(folder));
     }
 
     public void cannotSee(String fileName) {
-        cannotSeeFileAssertion(fileName).assertWith(solo);
+        assertWith.solo(cannotSeeFileAssertion(fileName));
     }
 }

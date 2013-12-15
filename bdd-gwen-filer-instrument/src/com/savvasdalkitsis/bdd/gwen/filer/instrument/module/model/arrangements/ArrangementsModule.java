@@ -7,10 +7,11 @@ import com.savvasdalkitsis.bdd.gwen.filer.instrument.model.arrangements.Contains
 import com.savvasdalkitsis.bdd.gwen.filer.instrument.model.arrangements.ViewFolderArrangement;
 import com.shazam.gwen.tasks.Arrangement;
 
+import java.io.File;
 import java.util.List;
 
 public class ArrangementsModule {
-    public static ContainsFilesArrangement containsFilesArrangement(List<String> fileNames) {
+    public static Arrangement<File> containsFilesArrangement(List<String> fileNames) {
         return new ContainsFilesArrangement(fileNames);
     }
 
@@ -18,7 +19,7 @@ public class ArrangementsModule {
         return new ViewFolderArrangement(folder);
     }
 
-    public static ContainsFolderArrangement containsFolderArrangement(String folderName) {
+    public static Arrangement<File> containsFolderArrangement(String folderName) {
         return new ContainsFolderArrangement(folderName);
     }
 }

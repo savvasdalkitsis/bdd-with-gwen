@@ -7,6 +7,9 @@ import android.util.Log;
 import com.jayway.android.robotium.solo.Solo;
 import com.savvasdalkitsis.bdd.gwen.filer.instrument.model.agents.Folder;
 import com.savvasdalkitsis.bdd.gwen.filer.instrument.model.agents.User;
+import com.savvasdalkitsis.bdd.gwen.filer.instrument.model.tasks.ActOn;
+import com.savvasdalkitsis.bdd.gwen.filer.instrument.model.tasks.ArrangeWith;
+import com.savvasdalkitsis.bdd.gwen.filer.instrument.model.tasks.AssertWith;
 
 import java.io.File;
 
@@ -21,8 +24,10 @@ public class FilerInstrumentationTestCase extends InstrumentationTestCase {
         Context targetContext = instrumentation.getTargetContext();
         File externalCacheDir = targetContext.getExternalCacheDir();
         clear(externalCacheDir);
-        folder = new Folder(externalCacheDir);
-        user = new User(targetContext, new Solo(instrumentation));
+        ArrangeWith arrangeWith = new ArrangeWith(targetContext, externalCacheDir);
+        folder = new Folder(arrangeWith, externalCacheDir.getAbsolutePath());
+        final Solo solo = new Solo(instrumentation);
+        user = new User(arrangeWith, new ActOn(solo), new AssertWith(solo));
     }
 
     private void clear(File dir) {

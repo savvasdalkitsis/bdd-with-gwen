@@ -1,23 +1,24 @@
 package com.savvasdalkitsis.bdd.gwen.filer.instrument.model.agents;
 
-import java.io.File;
+import com.savvasdalkitsis.bdd.gwen.filer.instrument.model.tasks.ArrangeWith;
+
 import java.util.List;
 
 import static com.savvasdalkitsis.bdd.gwen.filer.instrument.module.model.arrangements.ArrangementsModule.containsFilesArrangement;
 import static com.savvasdalkitsis.bdd.gwen.filer.instrument.module.model.arrangements.ArrangementsModule.containsFolderArrangement;
 
 public class FolderArrangements {
-    private File dir;
+    private final ArrangeWith arrangeWith;
 
-    public FolderArrangements(File dir) {
-        this.dir = dir;
+    public FolderArrangements(ArrangeWith arrangeWith) {
+        this.arrangeWith = arrangeWith;
     }
 
     public void containsFolder(String folderName) {
-        containsFolderArrangement(folderName).arrangeWith(dir);
+        arrangeWith.baseDirectory(containsFolderArrangement(folderName));
     }
 
     public void contains(List<String> fileNames) {
-        containsFilesArrangement(fileNames).arrangeWith(dir);
+        arrangeWith.baseDirectory(containsFilesArrangement(fileNames));
     }
 }

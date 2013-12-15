@@ -1,7 +1,8 @@
 package com.savvasdalkitsis.bdd.gwen.filer.instrument.model.agents;
 
-import android.content.Context;
-import com.jayway.android.robotium.solo.Solo;
+import com.savvasdalkitsis.bdd.gwen.filer.instrument.model.tasks.ActOn;
+import com.savvasdalkitsis.bdd.gwen.filer.instrument.model.tasks.ArrangeWith;
+import com.savvasdalkitsis.bdd.gwen.filer.instrument.model.tasks.AssertWith;
 import com.shazam.gwen.gwt.Given;
 import com.shazam.gwen.gwt.Then;
 import com.shazam.gwen.gwt.When;
@@ -11,10 +12,10 @@ public class User implements Given<UserArrangements>, When<UserActions>, Then<Us
     private final UserActions userActions;
     private final UserAssertions userAssertions;
 
-    public User(Context targetContext, Solo solo) {
-        userArrangements = new UserArrangements(targetContext);
-        userActions = new UserActions(solo);
-        userAssertions = new UserAssertions(solo);
+    public User(ArrangeWith arrangeWith, ActOn actOn, AssertWith assertWith) {
+        userArrangements = new UserArrangements(arrangeWith);
+        userActions = new UserActions(actOn);
+        userAssertions = new UserAssertions(assertWith);
     }
 
     @Override

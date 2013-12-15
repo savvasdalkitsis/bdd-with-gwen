@@ -1,16 +1,15 @@
 package com.savvasdalkitsis.bdd.gwen.filer.instrument.model.agents;
 
+import com.savvasdalkitsis.bdd.gwen.filer.instrument.model.tasks.ArrangeWith;
 import com.shazam.gwen.gwt.Given;
-
-import java.io.File;
 
 public class Folder implements Given<FolderArrangements> {
     private final FolderArrangements folderArrangements;
-    private File dir;
+    private String absolutePath;
 
-    public Folder(File dir) {
-        this.dir = dir;
-        folderArrangements = new FolderArrangements(dir);
+    public Folder(ArrangeWith arrangeWith, String absolutePath) {
+        this.absolutePath = absolutePath;
+        folderArrangements = new FolderArrangements(arrangeWith);
     }
 
     @Override
@@ -19,6 +18,6 @@ public class Folder implements Given<FolderArrangements> {
     }
 
     public String getAbsolutePath() {
-        return dir.getAbsolutePath();
+        return absolutePath;
     }
 }

@@ -1,21 +1,21 @@
 package com.savvasdalkitsis.bdd.gwen.filer.instrument.model.agents;
 
-import com.jayway.android.robotium.solo.Solo;
+import com.savvasdalkitsis.bdd.gwen.filer.instrument.model.tasks.ActOn;
 
 import static com.savvasdalkitsis.bdd.gwen.filer.instrument.module.model.actions.ActionsModule.deleteFileAction;
 import static com.savvasdalkitsis.bdd.gwen.filer.instrument.module.model.actions.ActionsModule.opensFolderAction;
 
 public class UserActions {
-    private Solo solo;
+    private final ActOn actOn;
 
-    public UserActions(Solo solo) {
-        this.solo = solo;
+    public UserActions(ActOn actOn) {
+        this.actOn = actOn;
     }
     public void opens(String folder) {
-        opensFolderAction(folder).actOn(solo);
+        actOn.solo(opensFolderAction(folder));
     }
 
     public void deletesFile(String fileName) {
-        deleteFileAction(fileName).actOn(solo);
+        actOn.solo((deleteFileAction(fileName)));
     }
 }

@@ -6,4 +6,5 @@ import static java.util.Arrays.asList;
 
 public class TestFiles {
     public static final List<String> SOME_FILES = asList("file1.txt", "file2.txt");
+    public static final String SUB_FOLDER = "a_folder";
 }

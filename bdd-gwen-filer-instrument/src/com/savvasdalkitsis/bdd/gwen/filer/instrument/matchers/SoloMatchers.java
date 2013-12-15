@@ -20,4 +20,20 @@ public class SoloMatchers {
             }
         };
     }
+
+    public static Matcher<? super Solo> hasActivityTitle(final String title) {
+        return new TypeSafeDiagnosingMatcher<Solo>() {
+            @Override
+            protected boolean matchesSafely(Solo item, Description mismatchDescription) {
+                String itemTitle = item.getCurrentActivity().getTitle().toString();
+                mismatchDescription.appendText("title was ").appendText(itemTitle);
+                return title.equals(itemTitle);
+            }
+
+            @Override
+            public void describeTo(Description description) {
+                description.appendText("Activity title to be ").appendText(title);
+            }
+        };
+    }
 }

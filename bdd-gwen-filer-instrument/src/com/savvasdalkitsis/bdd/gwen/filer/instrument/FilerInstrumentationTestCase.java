@@ -32,13 +32,18 @@ public class FilerInstrumentationTestCase extends InstrumentationTestCase {
         }
         for (File file : files) {
             if (file.isFile()) {
-                boolean deleted = file.delete();
-                if (!deleted) {
-                    Log.w(FilerInstrumentationTestCase.class.getName(), "Failed to delete file " + file.getAbsolutePath());
-                }
+                delete(file);
             } else {
                 clear(file);
+                delete(file);
             }
+        }
+    }
+
+    private void delete(File file) {
+        boolean deleted = file.delete();
+        if (!deleted) {
+            Log.w(FilerInstrumentationTestCase.class.getName(), "Failed to delete file " + file.getAbsolutePath());
         }
     }
 }

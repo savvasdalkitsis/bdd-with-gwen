@@ -15,7 +15,7 @@
     </properties>
 
     <modules>
-        <module>bdd-gwen-app</module>
+        <module>bdd-gwen-filer</module>
     </modules>
 
 </project>

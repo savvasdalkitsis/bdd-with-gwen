@@ -10,7 +10,7 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>bdd-gwen-app</artifactId>
+    <artifactId>bdd-gwen-filer</artifactId>
 
     <build>
         <plugins>

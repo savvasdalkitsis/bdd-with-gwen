@@ -1,8 +1,7 @@
-package com.savvasdalkitsis.bdd.gwen.loader.directory;
+package com.savvasdalkitsis.bdd.gwen.android.loading.directory;
 
 import com.google.common.base.Function;
-import com.savvasdalkitsis.bdd.gwen.fetcher.directory.DirectoryFetcherData;
-import com.savvasdalkitsis.bdd.gwen.loader.DataRetriever;
+import com.savvasdalkitsis.bdd.gwen.android.loading.loader.DataRetriever;
 import com.savvasdalkitsis.bdd.gwen.model.directory.DirectoryContents;
 import com.savvasdalkitsis.bdd.gwen.model.directory.DirectoryEntry;
 

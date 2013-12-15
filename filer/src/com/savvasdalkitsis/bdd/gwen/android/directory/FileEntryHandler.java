@@ -1,4 +1,4 @@
-package com.savvasdalkitsis.bdd.gwen.factory.directory;
+package com.savvasdalkitsis.bdd.gwen.android.directory;
 
 import com.savvasdalkitsis.bdd.gwen.FilerApplication;
 import com.savvasdalkitsis.bdd.gwen.R;

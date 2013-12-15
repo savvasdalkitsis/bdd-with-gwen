@@ -1,6 +1,4 @@
-package com.savvasdalkitsis.bdd.gwen.model.file;
-
-import com.savvasdalkitsis.bdd.gwen.model.directory.DirectoryEntry;
+package com.savvasdalkitsis.bdd.gwen.model.directory;
 
 import java.io.File;
 

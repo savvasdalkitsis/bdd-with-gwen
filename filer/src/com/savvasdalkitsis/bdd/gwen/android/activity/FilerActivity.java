@@ -1,4 +1,4 @@
-package com.savvasdalkitsis.bdd.gwen.activity;
+package com.savvasdalkitsis.bdd.gwen.android.activity;
 
 import android.app.Activity;
 import android.app.FragmentManager;

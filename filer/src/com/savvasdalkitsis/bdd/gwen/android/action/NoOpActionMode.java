@@ -1,4 +1,4 @@
-package com.savvasdalkitsis.bdd.gwen.action;
+package com.savvasdalkitsis.bdd.gwen.android.action;
 
 import android.view.ActionMode;
 import android.view.Menu;

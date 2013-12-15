@@ -1,4 +1,4 @@
-package com.savvasdalkitsis.bdd.gwen.fragment.directory;
+package com.savvasdalkitsis.bdd.gwen.android.directory;
 
 import android.app.AlertDialog;
 import android.content.Context;
@@ -26,6 +26,7 @@ public class DialogFolderCreator implements FolderCreator {
 
         final EditText input = new EditText(themedContext);
         input.setPadding(20, 20, 20, 20);
+        //noinspection PointlessBitwiseExpression
         input.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_NORMAL);
         builder.setView(input);
 

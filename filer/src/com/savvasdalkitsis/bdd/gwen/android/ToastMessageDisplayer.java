@@ -1,7 +1,8 @@
-package com.savvasdalkitsis.bdd.gwen.model;
+package com.savvasdalkitsis.bdd.gwen.android;
 
 import android.content.Context;
 import android.widget.Toast;
+import com.savvasdalkitsis.bdd.gwen.model.MessageDisplayer;
 
 public class ToastMessageDisplayer implements MessageDisplayer {
 

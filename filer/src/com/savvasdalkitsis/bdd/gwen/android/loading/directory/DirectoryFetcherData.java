@@ -1,4 +1,4 @@
-package com.savvasdalkitsis.bdd.gwen.fetcher.directory;
+package com.savvasdalkitsis.bdd.gwen.android.loading.directory;
 
 public class DirectoryFetcherData {
     private String absolutePath;

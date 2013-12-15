@@ -5,4 +5,5 @@
     <string name="file_handling_not_supported">File handling not supported yet</string>
     <string name="delete">Delete</string>
     <string name="new_directory">New directory</string>
+    <string name="error_creating_folder">Could not create folder</string>
 </resources>

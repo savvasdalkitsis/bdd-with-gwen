@@ -1,4 +1,4 @@
-package com.savvasdalkitsis.bdd.gwen.fragment.directory;
+package com.savvasdalkitsis.bdd.gwen.android.fragment;
 
 import android.app.*;
 import android.os.Bundle;
@@ -8,24 +8,24 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import com.google.common.collect.ImmutableMap;
 import com.savvasdalkitsis.bdd.gwen.R;
-import com.savvasdalkitsis.bdd.gwen.action.NoOpActionMode;
+import com.savvasdalkitsis.bdd.gwen.android.action.NoOpActionMode;
 import com.savvasdalkitsis.bdd.gwen.factory.Factory;
 import com.savvasdalkitsis.bdd.gwen.fetcher.Fetcher;
-import com.savvasdalkitsis.bdd.gwen.fetcher.directory.DirectoryFetcherData;
+import com.savvasdalkitsis.bdd.gwen.android.loading.directory.DirectoryFetcherData;
 import com.savvasdalkitsis.bdd.gwen.fetcher.directory.DirectoryListener;
 import com.savvasdalkitsis.bdd.gwen.model.MessageDisplayer;
 import com.savvasdalkitsis.bdd.gwen.model.directory.*;
-import com.savvasdalkitsis.bdd.gwen.model.file.DirectoryEntryDeleter;
+import com.savvasdalkitsis.bdd.gwen.model.directory.DirectoryEntryDeleter;
 
 import java.util.Map;
 
-import static com.savvasdalkitsis.bdd.gwen.fetcher.directory.DirectoryFetcherData.Builder.directoryFetcherData;
+import static com.savvasdalkitsis.bdd.gwen.android.loading.directory.DirectoryFetcherData.Builder.directoryFetcherData;
 import static com.savvasdalkitsis.bdd.gwen.model.directory.DirectoryEntry.Type.DIRECTORY;
 import static com.savvasdalkitsis.bdd.gwen.model.directory.DirectoryEntry.Type.FILE;
 import static com.savvasdalkitsis.bdd.gwen.module.factory.FactoryModule.*;
 import static com.savvasdalkitsis.bdd.gwen.module.model.MessageDisplayerModule.messageDisplayer;
 import static com.savvasdalkitsis.bdd.gwen.module.model.directory.FolderCreatorModule.folderCreator;
-import static com.savvasdalkitsis.bdd.gwen.module.model.file.DirectoryEntryDeleterModule.deleter;
+import static com.savvasdalkitsis.bdd.gwen.module.model.directory.DirectoryEntryDeleterModule.deleter;
 
 public class DirectoryFragment extends ListFragment implements DirectoryListener, AdapterView.OnItemLongClickListener, ActionMode.Callback, FolderCreationListener {
 
@@ -176,7 +176,7 @@ public class DirectoryFragment extends ListFragment implements DirectoryListener
 
     @Override
     public void onNewFolderCreationFailed() {
-        messageDisplayer.showMessage("Could not create folder");
+        messageDisplayer.showMessage(getString(R.string.error_creating_folder));
     }
 
     private void onEntryClicked(DirectoryEntry directoryEntry) {

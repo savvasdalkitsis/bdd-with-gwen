@@ -1,4 +1,4 @@
-package com.savvasdalkitsis.bdd.gwen.fragment.directory;
+package com.savvasdalkitsis.bdd.gwen.android.fragment;
 
 import android.content.Context;
 import android.view.LayoutInflater;

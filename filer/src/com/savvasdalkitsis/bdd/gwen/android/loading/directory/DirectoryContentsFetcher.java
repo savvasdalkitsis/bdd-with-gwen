@@ -1,12 +1,12 @@
-package com.savvasdalkitsis.bdd.gwen.fetcher.directory;
+package com.savvasdalkitsis.bdd.gwen.android.loading.directory;
 
 import android.app.LoaderManager;
 import android.content.Context;
 import android.content.Loader;
 import android.os.Bundle;
 import com.savvasdalkitsis.bdd.gwen.fetcher.Fetcher;
-import com.savvasdalkitsis.bdd.gwen.loader.TypeLoader;
-import com.savvasdalkitsis.bdd.gwen.loader.directory.DirectoryContentsRetriever;
+import com.savvasdalkitsis.bdd.gwen.fetcher.directory.DirectoryListener;
+import com.savvasdalkitsis.bdd.gwen.android.loading.loader.TypeLoader;
 import com.savvasdalkitsis.bdd.gwen.model.directory.DirectoryContents;
 
 public class DirectoryContentsFetcher implements Fetcher<DirectoryFetcherData, DirectoryListener>,

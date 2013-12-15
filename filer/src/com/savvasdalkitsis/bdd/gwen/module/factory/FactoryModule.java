@@ -3,12 +3,12 @@ package com.savvasdalkitsis.bdd.gwen.module.factory;
 import android.app.FragmentManager;
 import android.app.LoaderManager;
 import com.savvasdalkitsis.bdd.gwen.factory.Factory;
-import com.savvasdalkitsis.bdd.gwen.factory.directory.FileEntryHandler;
+import com.savvasdalkitsis.bdd.gwen.android.directory.FileEntryHandler;
 import com.savvasdalkitsis.bdd.gwen.fetcher.Fetcher;
-import com.savvasdalkitsis.bdd.gwen.fetcher.directory.DirectoryContentsFetcher;
-import com.savvasdalkitsis.bdd.gwen.fetcher.directory.DirectoryFetcherData;
+import com.savvasdalkitsis.bdd.gwen.android.loading.directory.DirectoryContentsFetcher;
+import com.savvasdalkitsis.bdd.gwen.android.loading.directory.DirectoryFetcherData;
 import com.savvasdalkitsis.bdd.gwen.fetcher.directory.DirectoryListener;
-import com.savvasdalkitsis.bdd.gwen.fragment.directory.FragmentDirectoryDisplayer;
+import com.savvasdalkitsis.bdd.gwen.android.directory.FragmentDirectoryDisplayer;
 import com.savvasdalkitsis.bdd.gwen.model.directory.DirectoryEntryHandler;
 
 import static com.savvasdalkitsis.bdd.gwen.module.ApplicationModule.application;

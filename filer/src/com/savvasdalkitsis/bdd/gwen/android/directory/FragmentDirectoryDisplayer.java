@@ -1,6 +1,7 @@
-package com.savvasdalkitsis.bdd.gwen.fragment.directory;
+package com.savvasdalkitsis.bdd.gwen.android.directory;
 
 import android.app.FragmentManager;
+import com.savvasdalkitsis.bdd.gwen.android.fragment.DirectoryFragment;
 import com.savvasdalkitsis.bdd.gwen.model.directory.DirectoryEntryHandler;
 import com.savvasdalkitsis.bdd.gwen.model.directory.DirectoryEntry;
 

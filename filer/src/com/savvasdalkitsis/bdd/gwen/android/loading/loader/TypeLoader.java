@@ -1,4 +1,4 @@
-package com.savvasdalkitsis.bdd.gwen.loader;
+package com.savvasdalkitsis.bdd.gwen.android.loading.loader;
 
 import android.content.AsyncTaskLoader;
 import android.content.Context;

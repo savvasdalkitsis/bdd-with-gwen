@@ -16,6 +16,7 @@ import java.io.File;
 public class FilerInstrumentationTestCase extends InstrumentationTestCase {
     protected Folder folder;
     protected User user;
+    private Solo solo;
 
     @Override
     protected void setUp() throws Exception {
@@ -26,8 +27,14 @@ public class FilerInstrumentationTestCase extends InstrumentationTestCase {
         clear(externalCacheDir);
         ArrangeWith arrangeWith = new ArrangeWith(targetContext, externalCacheDir);
         folder = new Folder(arrangeWith, externalCacheDir.getAbsolutePath());
-        final Solo solo = new Solo(instrumentation);
+        solo = new Solo(instrumentation);
         user = new User(arrangeWith, new ActOn(solo), new AssertWith(solo));
+    }
+
+    @Override
+    protected void tearDown() throws Exception {
+        super.tearDown();
+        solo.getCurrentActivity().finish();
     }
 
     private void clear(File dir) {

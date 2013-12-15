@@ -4,14 +4,13 @@ import com.shazam.gwen.tasks.Arrangement;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.List;
 
 public class ContainsFilesArrangement implements Arrangement<File> {
 
     public static final String SEPARATOR = ", ";
-    private List<String> fileNames;
+    private String[] fileNames;
 
-    public ContainsFilesArrangement(List<String> fileNames) {
+    public ContainsFilesArrangement(String... fileNames) {
         this.fileNames = fileNames;
     }
 

@@ -24,4 +24,16 @@ public class UserTest extends FilerInstrumentationTestCase {
 
         then(user).cannotSee(FILE_1);
     }
+
+    public void testCanCreateNewFolder() throws Exception {
+        given(user).isViewing(folder);
+
+        when(user).createsNewFolder(NEW_FOLDER);
+
+        then(user).sees(NEW_FOLDER);
+
+        when(user).opens(NEW_FOLDER);
+
+        then(user).isIn(NEW_FOLDER);
+    }
 }

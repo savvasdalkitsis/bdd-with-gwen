@@ -2,8 +2,7 @@ package com.savvasdalkitsis.bdd.gwen.filer.instrument.model.agents;
 
 import com.savvasdalkitsis.bdd.gwen.filer.instrument.model.tasks.ActOn;
 
-import static com.savvasdalkitsis.bdd.gwen.filer.instrument.module.model.actions.ActionsModule.deleteFileAction;
-import static com.savvasdalkitsis.bdd.gwen.filer.instrument.module.model.actions.ActionsModule.opensFolderAction;
+import static com.savvasdalkitsis.bdd.gwen.filer.instrument.module.model.actions.ActionsModule.*;
 
 public class UserActions {
     private final ActOn actOn;
@@ -16,6 +15,10 @@ public class UserActions {
     }
 
     public void deletesFile(String fileName) {
-        actOn.solo((deleteFileAction(fileName)));
+        actOn.solo(deleteFileAction(fileName));
+    }
+
+    public void createsNewFolder(String folder) {
+        actOn.solo(createNewFolderAction(folder));
     }
 }

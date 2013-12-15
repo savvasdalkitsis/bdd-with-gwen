@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.text.InputType;
 import android.widget.EditText;
+import com.savvasdalkitsis.bdd.gwen.filer.R;
 import com.savvasdalkitsis.bdd.gwen.filer.model.directory.FolderCreationListener;
 import com.savvasdalkitsis.bdd.gwen.filer.model.directory.FolderCreator;
 
@@ -25,6 +26,7 @@ public class DialogFolderCreator implements FolderCreator {
         builder.setMessage("Enter folder name");
 
         final EditText input = new EditText(themedContext);
+        input.setId(R.id.new_folder_edit_text);
         input.setPadding(20, 20, 20, 20);
         //noinspection PointlessBitwiseExpression
         input.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_NORMAL);

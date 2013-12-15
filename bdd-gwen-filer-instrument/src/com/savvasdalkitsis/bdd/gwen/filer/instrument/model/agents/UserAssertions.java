@@ -2,9 +2,8 @@ package com.savvasdalkitsis.bdd.gwen.filer.instrument.model.agents;
 
 import com.savvasdalkitsis.bdd.gwen.filer.instrument.model.tasks.AssertWith;
 
-import java.util.List;
-
 import static com.savvasdalkitsis.bdd.gwen.filer.instrument.module.model.assertions.AssertionsModule.*;
+import static java.util.Arrays.asList;
 
 public class UserAssertions {
     private final AssertWith assertWith;
@@ -13,8 +12,8 @@ public class UserAssertions {
         this.assertWith = assertWith;
     }
 
-    public void sees(List<String> fileNames) {
-        assertWith.solo(seesFilesAssertion(fileNames));
+    public void sees(String... fileNames) {
+        assertWith.solo(seesFilesAssertion(asList(fileNames)));
     }
 
     public void isIn(String folder) {

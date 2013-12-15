@@ -8,10 +8,9 @@ import com.savvasdalkitsis.bdd.gwen.filer.instrument.model.arrangements.ViewFold
 import com.shazam.gwen.tasks.Arrangement;
 
 import java.io.File;
-import java.util.List;
 
 public class ArrangementsModule {
-    public static Arrangement<File> containsFilesArrangement(List<String> fileNames) {
+    public static Arrangement<File> containsFilesArrangement(String... fileNames) {
         return new ContainsFilesArrangement(fileNames);
     }
 

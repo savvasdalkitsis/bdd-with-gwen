@@ -1,19 +1,18 @@
 package com.savvasdalkitsis.bdd.gwen.filer.android.loading.directory;
 
-import com.google.common.base.Function;
 import com.savvasdalkitsis.bdd.gwen.filer.android.loading.loader.DataRetriever;
 import com.savvasdalkitsis.bdd.gwen.filer.model.directory.DirectoryContents;
 import com.savvasdalkitsis.bdd.gwen.filer.model.directory.DirectoryEntry;
+import com.savvasdalkitsis.bdd.gwen.filer.util.Function;
 
-import javax.annotation.Nullable;
 import java.io.File;
 import java.io.FileFilter;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
-import static com.google.common.collect.Lists.transform;
 import static com.savvasdalkitsis.bdd.gwen.filer.model.directory.DirectoryContents.Builder.directoryContents;
+import static com.savvasdalkitsis.bdd.gwen.filer.util.Transformation.transform;
 import static java.util.Arrays.asList;
 import static java.util.Collections.emptyList;
 import static java.util.Collections.sort;
@@ -61,18 +60,20 @@ public class DirectoryContentsRetriever implements DataRetriever<DirectoryConten
 
     private Function<File, DirectoryEntry> asDirectoryEntry() {
         return new Function<File, DirectoryEntry>() {
+
             @Override
-            public DirectoryEntry apply(@Nullable File file) {
-                return DirectoryEntry.directoryFrom(file);
+            public DirectoryEntry transform(File from) {
+                return DirectoryEntry.directoryFrom(from);
             }
         };
     }
 
     private Function<File, DirectoryEntry> asFileEntry() {
         return new Function<File, DirectoryEntry>() {
+
             @Override
-            public DirectoryEntry apply(@Nullable File file) {
-                return DirectoryEntry.fileFrom(file);
+            public DirectoryEntry transform(File from) {
+                return DirectoryEntry.fileFrom(from);
             }
         };
     }

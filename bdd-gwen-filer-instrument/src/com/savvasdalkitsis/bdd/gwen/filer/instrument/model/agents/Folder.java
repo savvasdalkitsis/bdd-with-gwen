@@ -1,26 +1,21 @@
 package com.savvasdalkitsis.bdd.gwen.filer.instrument.model.agents;
 
-import com.shazam.gwen.collaborators.Arranger;
+import com.shazam.gwen.gwt.Given;
 
 import java.io.File;
-import java.util.List;
 
-import static com.savvasdalkitsis.bdd.gwen.filer.instrument.module.model.arrangements.ArrangementsModule.containsFilesArrangement;
-import static com.savvasdalkitsis.bdd.gwen.filer.instrument.module.model.arrangements.ArrangementsModule.containsFolderArrangement;
-
-public class Folder implements Arranger {
+public class Folder implements Given<FolderArrangements> {
+    private final FolderArrangements folderArrangements;
     private File dir;
 
     public Folder(File dir) {
         this.dir = dir;
+        folderArrangements = new FolderArrangements(dir);
     }
 
-    public void containsFolder(String folderName) {
-        containsFolderArrangement(folderName).arrangeWith(dir);
-    }
-
-    public void contains(List<String> fileNames) {
-        containsFilesArrangement(fileNames).arrangeWith(dir);
+    @Override
+    public FolderArrangements given() {
+        return folderArrangements;
     }
 
     public String getAbsolutePath() {

@@ -2,40 +2,33 @@ package com.savvasdalkitsis.bdd.gwen.filer.instrument.model.agents;
 
 import android.content.Context;
 import com.jayway.android.robotium.solo.Solo;
-import com.shazam.gwen.collaborators.Actor;
-import com.shazam.gwen.collaborators.Arranger;
-import com.shazam.gwen.collaborators.Asserter;
+import com.shazam.gwen.gwt.Given;
+import com.shazam.gwen.gwt.Then;
+import com.shazam.gwen.gwt.When;
 
-import java.util.List;
-
-import static com.savvasdalkitsis.bdd.gwen.filer.instrument.module.model.actions.ActionsModule.opensFolderAction;
-import static com.savvasdalkitsis.bdd.gwen.filer.instrument.module.model.arrangements.ArrangementsModule.viewFolderArrangement;
-import static com.savvasdalkitsis.bdd.gwen.filer.instrument.module.model.assertions.AssertionsModule.isInFolderAssertion;
-import static com.savvasdalkitsis.bdd.gwen.filer.instrument.module.model.assertions.AssertionsModule.seesFilesAssertion;
-
-public class User implements Asserter, Arranger, Actor {
-    private Context targetContext;
-    private Solo solo;
+public class User implements Given<UserArrangements>, When<UserActions>, Then<UserAssertions> {
+    private final UserArrangements userArrangements;
+    private final UserActions userActions;
+    private final UserAssertions userAssertions;
 
     public User(Context targetContext, Solo solo) {
-        this.targetContext = targetContext;
-        this.solo = solo;
+        userArrangements = new UserArrangements(targetContext);
+        userActions = new UserActions(solo);
+        userAssertions = new UserAssertions(solo);
     }
 
-    public void isViewing(Folder folder) {
-        viewFolderArrangement(folder).arrangeWith(targetContext);
+    @Override
+    public UserArrangements given() {
+        return userArrangements;
     }
 
-    public void sees(List<String> fileNames) {
-        seesFilesAssertion(fileNames).assertWith(solo);
+    @Override
+    public UserActions when() {
+        return userActions;
     }
 
-    public void opens(String folder) {
-        opensFolderAction(folder).actOn(solo);
+    @Override
+    public UserAssertions then() {
+        return userAssertions;
     }
-
-    public void isIn(String folder) {
-        isInFolderAssertion(folder).assertWith(solo);
-    }
-
 }

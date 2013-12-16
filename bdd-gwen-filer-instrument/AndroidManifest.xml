@@ -12,7 +12,7 @@
         <uses-library android:name="android.test.runner"/>
     </application>
 
-    <instrumentation android:name="android.test.InstrumentationTestRunner"
+    <instrumentation android:name="com.google.android.apps.common.testing.testrunner.GoogleInstrumentation"
                      android:targetPackage="com.savvasdalkitsis.bdd.gwen.filer"
                      android:label="Tests for com.savvasdalkitsis.bdd.gwen.filer"/>
 </manifest>

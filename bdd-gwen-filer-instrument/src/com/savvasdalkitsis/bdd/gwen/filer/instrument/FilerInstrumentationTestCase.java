@@ -13,6 +13,7 @@ import java.io.File;
 public class FilerInstrumentationTestCase extends InstrumentationTestCase {
     protected Folder folder;
     protected User user;
+    private Solo solo;
 
     @Override
     protected void setUp() throws Exception {
@@ -22,7 +23,14 @@ public class FilerInstrumentationTestCase extends InstrumentationTestCase {
         File externalCacheDir = targetContext.getExternalCacheDir();
         clear(externalCacheDir);
         folder = new Folder(externalCacheDir);
-        user = new User(targetContext, new Solo(instrumentation));
+        solo = new Solo(instrumentation);
+        user = new User(targetContext, solo);
+    }
+
+    @Override
+    protected void tearDown() throws Exception {
+        super.tearDown();
+        solo.getCurrentActivity().finish();
     }
 
     private void clear(File dir) {

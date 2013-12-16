@@ -1,19 +1,19 @@
 package com.savvasdalkitsis.bdd.gwen.filer.android.loading.directory;
 
-import com.google.common.base.Function;
 import com.savvasdalkitsis.bdd.gwen.filer.android.loading.loader.DataRetriever;
 import com.savvasdalkitsis.bdd.gwen.filer.model.directory.DirectoryContents;
 import com.savvasdalkitsis.bdd.gwen.filer.model.directory.DirectoryEntry;
+import com.savvasdalkitsis.bdd.gwen.filer.util.Function;
+import com.sun.istack.internal.Nullable;
 
-import javax.annotation.Nullable;
 import java.io.File;
 import java.io.FileFilter;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
-import static com.google.common.collect.Lists.transform;
 import static com.savvasdalkitsis.bdd.gwen.filer.model.directory.DirectoryContents.Builder.directoryContents;
+import static com.savvasdalkitsis.bdd.gwen.filer.util.Transformation.transform;
 import static java.util.Arrays.asList;
 import static java.util.Collections.emptyList;
 import static java.util.Collections.sort;

@@ -6,17 +6,16 @@ import android.view.*;
 import android.widget.AbsListView;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import com.google.common.collect.ImmutableMap;
 import com.savvasdalkitsis.bdd.gwen.filer.R;
 import com.savvasdalkitsis.bdd.gwen.filer.android.action.NoOpActionMode;
+import com.savvasdalkitsis.bdd.gwen.filer.android.loading.directory.DirectoryFetcherData;
 import com.savvasdalkitsis.bdd.gwen.filer.factory.Factory;
 import com.savvasdalkitsis.bdd.gwen.filer.fetcher.Fetcher;
-import com.savvasdalkitsis.bdd.gwen.filer.android.loading.directory.DirectoryFetcherData;
 import com.savvasdalkitsis.bdd.gwen.filer.fetcher.directory.DirectoryListener;
 import com.savvasdalkitsis.bdd.gwen.filer.model.MessageDisplayer;
 import com.savvasdalkitsis.bdd.gwen.filer.model.directory.*;
-import com.savvasdalkitsis.bdd.gwen.filer.model.directory.DirectoryEntryDeleter;
 
+import java.util.HashMap;
 import java.util.Map;
 
 import static com.savvasdalkitsis.bdd.gwen.filer.android.loading.directory.DirectoryFetcherData.Builder.directoryFetcherData;
@@ -24,8 +23,8 @@ import static com.savvasdalkitsis.bdd.gwen.filer.model.directory.DirectoryEntry.
 import static com.savvasdalkitsis.bdd.gwen.filer.model.directory.DirectoryEntry.Type.FILE;
 import static com.savvasdalkitsis.bdd.gwen.filer.module.factory.FactoryModule.*;
 import static com.savvasdalkitsis.bdd.gwen.filer.module.model.MessageDisplayerModule.messageDisplayer;
-import static com.savvasdalkitsis.bdd.gwen.filer.module.model.directory.FolderCreatorModule.folderCreator;
 import static com.savvasdalkitsis.bdd.gwen.filer.module.model.directory.DirectoryEntryDeleterModule.deleter;
+import static com.savvasdalkitsis.bdd.gwen.filer.module.model.directory.FolderCreatorModule.folderCreator;
 
 public class DirectoryFragment extends ListFragment implements DirectoryListener, AdapterView.OnItemLongClickListener, ActionMode.Callback, FolderCreationListener {
 
@@ -87,10 +86,9 @@ public class DirectoryFragment extends ListFragment implements DirectoryListener
         super.onAttach(activity);
         directoryContentsFetcher = fetcherFactory.create(getLoaderManager());
         folderCreator = folderCreatorFactory.create(activity);
-        handlers = ImmutableMap.of(
-                DIRECTORY, directoryDisplayerFactory.create(getFragmentManager()),
-                FILE, fileDisplayerFactory.create(getFragmentManager())
-        );
+        handlers = new HashMap<DirectoryEntry.Type, DirectoryEntryHandler>();
+        handlers.put(DIRECTORY, directoryDisplayerFactory.create(getFragmentManager()));
+        handlers.put(FILE, fileDisplayerFactory.create(getFragmentManager()));
     }
 
     @Override

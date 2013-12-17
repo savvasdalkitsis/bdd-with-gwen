@@ -10,6 +10,8 @@ install
 
 To build, install and run the acceptance test on the project, simply do a:
 
-{code}mvn clean install{code}
+```
+mvn clean install
+```
 
 on the root directory.

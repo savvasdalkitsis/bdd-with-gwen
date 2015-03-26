@@ -8,10 +8,10 @@ Gwen is a tiny library that facilitates the creation of clean, reusable and main
 install
 =======
 
-To build, install and run the acceptance test on the project, simply do a:
+To build, install and run the acceptance tests and unit tests on the project, simply do a:
 
 ```
-mvn clean install
+./gradlew test fork
 ```
 
 on the root directory.

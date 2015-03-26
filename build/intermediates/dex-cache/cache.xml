@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/savvas.dalkitsis/AndroidStudioProjects/BddwithGwen/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/libs/internal_impl-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
+        <dex dex="/Users/savvas.dalkitsis/AndroidStudioProjects/BddwithGwen/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.3-66769bc3e5c2e8a73c509135b61ba751f0de1b43.jar" />
+    </item>
+    <item
+        jar="/Users/savvas.dalkitsis/AndroidStudioProjects/BddwithGwen/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
+        <dex dex="/Users/savvas.dalkitsis/AndroidStudioProjects/BddwithGwen/app/build/intermediates/pre-dexed/debug/classes-42cd0206ba266c160de5043e325ef6eaf1efad12.jar" />
+    </item>
+    <item
+        jar="/usr/local/opt/android-sdk-macosx/extras/android/m2repository/com/android/support/support-annotations/21.0.3/support-annotations-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
+        <dex dex="/Users/savvas.dalkitsis/AndroidStudioProjects/BddwithGwen/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.3-dd8980e6429e6a64701343052c1777d34018c99e.jar" />
+    </item>
+    <item
+        jar="/Users/savvas.dalkitsis/.gradle/caches/modules-2/files-2.1/com.jayway.android.robotium/robotium-solo/4.3.1/8f57e32f76db8915d8bd50f1cc134dad0a3cac23/robotium-solo-4.3.1.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="8f57e32f76db8915d8bd50f1cc134dad0a3cac23">
+        <dex dex="/Users/savvas.dalkitsis/AndroidStudioProjects/BddwithGwen/app/build/intermediates/pre-dexed/androidTest/debug/robotium-solo-4.3.1-4895e9f5a0bf222224f423ad73fa0518d3ce2430.jar" />
+    </item>
+    <item
+        jar="/Users/savvas.dalkitsis/.gradle/caches/modules-2/files-2.1/junit/junit-dep/4.10/64417b3bafdecd366afa514bd5beeae6c1f85ece/junit-dep-4.10.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="64417b3bafdecd366afa514bd5beeae6c1f85ece">
+        <dex dex="/Users/savvas.dalkitsis/AndroidStudioProjects/BddwithGwen/app/build/intermediates/pre-dexed/androidTest/debug/junit-dep-4.10-1fe009d1a0ccbba3555f47ce310d5c6fbd9667dd.jar" />
+    </item>
+    <item
+        jar="/Users/savvas.dalkitsis/.gradle/caches/modules-2/files-2.1/com.shazam/gwen/1.0.2/9f18dcbc464edf6927f82c49200598fa74d0f083/gwen-1.0.2.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="9f18dcbc464edf6927f82c49200598fa74d0f083">
+        <dex dex="/Users/savvas.dalkitsis/AndroidStudioProjects/BddwithGwen/app/build/intermediates/pre-dexed/androidTest/debug/gwen-1.0.2-594f775511f779f36b36fa4c79c862defabca875.jar" />
+    </item>
+    <item
+        jar="/Users/savvas.dalkitsis/AndroidStudioProjects/BddwithGwen/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
+        <dex dex="/Users/savvas.dalkitsis/AndroidStudioProjects/BddwithGwen/app/build/intermediates/pre-dexed/debug/classes-aabf0990799cddb545b6c7267284f35e2429db20.jar" />
+    </item>
+    <item
+        jar="/Users/savvas.dalkitsis/AndroidStudioProjects/BddwithGwen/app/build/intermediates/exploded-aar/com.android.support.test/testing-support-lib/0.1/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="2700b782e8c78b36636a15b0ed86126a96295de7">
+        <dex dex="/Users/savvas.dalkitsis/AndroidStudioProjects/BddwithGwen/app/build/intermediates/pre-dexed/androidTest/debug/classes-4fbcab325e57bde11467b0afda5a1bbaff36be87.jar" />
+    </item>
+    <item
+        jar="/Users/savvas.dalkitsis/.gradle/caches/modules-2/files-2.1/org.hamcrest/hamcrest-all/1.3/63a21ebc981131004ad02e0434e799fd7f3a8d5a/hamcrest-all-1.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="63a21ebc981131004ad02e0434e799fd7f3a8d5a">
+        <dex dex="/Users/savvas.dalkitsis/AndroidStudioProjects/BddwithGwen/app/build/intermediates/pre-dexed/androidTest/debug/hamcrest-all-1.3-7fdb3fa8d88a430274df239ac3f3e50b79eb3c62.jar" />
+    </item>
+
+</items>
